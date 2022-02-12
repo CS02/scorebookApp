@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E66EF7D325D5A2F80068083D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF7D225D5A2F80068083D /* AppDelegate.swift */; };
+		E66EF7D525D5A2F80068083D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF7D425D5A2F80068083D /* SceneDelegate.swift */; };
+		E66EF7D725D5A2F80068083D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF7D625D5A2F80068083D /* ViewController.swift */; };
+		E66EF7DA25D5A2F80068083D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66EF7D825D5A2F80068083D /* Main.storyboard */; };
+		E66EF7DC25D5A2FD0068083D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66EF7DB25D5A2FD0068083D /* Assets.xcassets */; };
+		E66EF7DF25D5A2FD0068083D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66EF7DD25D5A2FD0068083D /* LaunchScreen.storyboard */; };
+		E66EF7E425D5A2FD0068083D /* zainh WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E66EF7E325D5A2FD0068083D /* zainh WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E66EF7EC25D5A2FF0068083D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66EF7EB25D5A2FF0068083D /* Assets.xcassets */; };
+		E66EF7F325D5A3000068083D /* zainh WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E66EF7F225D5A3000068083D /* zainh WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E66EF7FA25D5A3000068083D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF7F925D5A3000068083D /* ExtensionDelegate.swift */; };
+		E66EF7FC25D5A3000068083D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF7FB25D5A3000068083D /* ComplicationController.swift */; };
+		E66EF7FE25D5A3010068083D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66EF7FD25D5A3010068083D /* Assets.xcassets */; };
+		E66EF81625D5A68B0068083D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66EF81525D5A68B0068083D /* Interface.storyboard */; };
+		E66EF82E25D5AB730068083D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF82D25D5AB730068083D /* InterfaceController.swift */; };
+		E66EF83B25D5AC310068083D /* AddT2Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF83A25D5AC310068083D /* AddT2Players.swift */; };
+		E66EF84225D5AC430068083D /* batsmen1Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF84125D5AC430068083D /* batsmen1Name.swift */; };
+		E66EF84725D5AC4A0068083D /* bottomBatsmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF84625D5AC490068083D /* bottomBatsmen.swift */; };
+		E66EF84C25D5AC4F0068083D /* bowler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF84B25D5AC4F0068083D /* bowler.swift */; };
+		E66EF85125D5AC560068083D /* changeInnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF85025D5AC560068083D /* changeInnings.swift */; };
+		E66EF85625D5AC5A0068083D /* chooseBattingTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF85525D5AC5A0068083D /* chooseBattingTeam.swift */; };
+		E66EF86025D5AC6C0068083D /* enterPlayerNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF85F25D5AC6C0068083D /* enterPlayerNameController.swift */; };
+		E66EF86825D5ACA20068083D /* extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF86725D5ACA20068083D /* extras.swift */; };
+		E66EF86D25D5ACA70068083D /* HomeTeamRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF86C25D5ACA70068083D /* HomeTeamRowController.swift */; };
+		E66EF87225D5ACC20068083D /* oversNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF87125D5ACC20068083D /* oversNumberPad.swift */; };
+		E66EF87725D5ACCA0068083D /* scoreBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF87625D5ACCA0068083D /* scoreBoard.swift */; };
+		E66EF87C25D5ACD20068083D /* selectBottomBatsmenAW.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF87B25D5ACD10068083D /* selectBottomBatsmenAW.swift */; };
+		E66EF88125D5ACD80068083D /* selectHomeTeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF88025D5ACD80068083D /* selectHomeTeamPlayers.swift */; };
+		E66EF88625D5ACE00068083D /* selectPlayerNameRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF88525D5ACE00068083D /* selectPlayerNameRowController.swift */; };
+		E66EF88B25D5ACE60068083D /* selectTopBatsmenAW.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF88A25D5ACE60068083D /* selectTopBatsmenAW.swift */; };
+		E66EF89025D5ACF00068083D /* T2RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF88F25D5ACF00068083D /* T2RowController.swift */; };
+		E66EF89525D5ACFA0068083D /* team2PlayersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF89425D5ACFA0068083D /* team2PlayersController.swift */; };
+		E66EF89A25D5AD000068083D /* topBatsmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF89925D5AD000068083D /* topBatsmen.swift */; };
+		E66EF89F25D5AD060068083D /* wickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF89E25D5AD060068083D /* wickets.swift */; };
+		E66EF8A425D5AD0E0068083D /* WinningTeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF8A325D5AD0E0068083D /* WinningTeamScreen.swift */; };
+		E66EF8AE25D5AF200068083D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66EF81525D5A68B0068083D /* Interface.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E66EF7E525D5A2FD0068083D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E66EF7C725D5A2F70068083D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E66EF7E225D5A2FD0068083D;
+			remoteInfo = "zainh WatchKit App";
+		};
+		E66EF7F425D5A3000068083D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E66EF7C725D5A2F70068083D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E66EF7F125D5A3000068083D;
+			remoteInfo = "zainh WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E66EF80525D5A3010068083D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E66EF7F325D5A3000068083D /* zainh WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66EF80925D5A3010068083D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E66EF7E425D5A2FD0068083D /* zainh WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E66EF7CF25D5A2F80068083D /* zainh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zainh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66EF7D225D5A2F80068083D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E66EF7D425D5A2F80068083D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E66EF7D625D5A2F80068083D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E66EF7D925D5A2F80068083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E66EF7DB25D5A2FD0068083D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E66EF7DE25D5A2FD0068083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E66EF7E025D5A2FD0068083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E66EF7E325D5A2FD0068083D /* zainh WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zainh WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66EF7EB25D5A2FF0068083D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E66EF7ED25D5A2FF0068083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E66EF7F225D5A3000068083D /* zainh WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "zainh WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66EF7F925D5A3000068083D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E66EF7FB25D5A3000068083D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		E66EF7FD25D5A3010068083D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E66EF7FF25D5A3010068083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E66EF81525D5A68B0068083D /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		E66EF82D25D5AB730068083D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "Scorebook WatchKit Extension/InterfaceController.swift"; sourceTree = "<group>"; };
+		E66EF83A25D5AC310068083D /* AddT2Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddT2Players.swift; sourceTree = "<group>"; };
+		E66EF84125D5AC430068083D /* batsmen1Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batsmen1Name.swift; sourceTree = "<group>"; };
+		E66EF84625D5AC490068083D /* bottomBatsmen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomBatsmen.swift; sourceTree = "<group>"; };
+		E66EF84B25D5AC4F0068083D /* bowler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bowler.swift; sourceTree = "<group>"; };
+		E66EF85025D5AC560068083D /* changeInnings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeInnings.swift; sourceTree = "<group>"; };
+		E66EF85525D5AC5A0068083D /* chooseBattingTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseBattingTeam.swift; sourceTree = "<group>"; };
+		E66EF85F25D5AC6C0068083D /* enterPlayerNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterPlayerNameController.swift; sourceTree = "<group>"; };
+		E66EF86725D5ACA20068083D /* extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extras.swift; sourceTree = "<group>"; };
+		E66EF86C25D5ACA70068083D /* HomeTeamRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTeamRowController.swift; sourceTree = "<group>"; };
+		E66EF87125D5ACC20068083D /* oversNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oversNumberPad.swift; sourceTree = "<group>"; };
+		E66EF87625D5ACCA0068083D /* scoreBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreBoard.swift; sourceTree = "<group>"; };
+		E66EF87B25D5ACD10068083D /* selectBottomBatsmenAW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectBottomBatsmenAW.swift; sourceTree = "<group>"; };
+		E66EF88025D5ACD80068083D /* selectHomeTeamPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectHomeTeamPlayers.swift; sourceTree = "<group>"; };
+		E66EF88525D5ACE00068083D /* selectPlayerNameRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectPlayerNameRowController.swift; sourceTree = "<group>"; };
+		E66EF88A25D5ACE60068083D /* selectTopBatsmenAW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectTopBatsmenAW.swift; sourceTree = "<group>"; };
+		E66EF88F25D5ACF00068083D /* T2RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T2RowController.swift; sourceTree = "<group>"; };
+		E66EF89425D5ACFA0068083D /* team2PlayersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team2PlayersController.swift; sourceTree = "<group>"; };
+		E66EF89925D5AD000068083D /* topBatsmen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topBatsmen.swift; sourceTree = "<group>"; };
+		E66EF89E25D5AD060068083D /* wickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wickets.swift; sourceTree = "<group>"; };
+		E66EF8A325D5AD0E0068083D /* WinningTeamScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningTeamScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E66EF7CC25D5A2F80068083D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66EF7EF25D5A3000068083D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E66EF7C625D5A2F70068083D = {
+			isa = PBXGroup;
+			children = (
+				E66EF7D125D5A2F80068083D /* zainh */,
+				E66EF7E725D5A2FD0068083D /* zainh WatchKit App */,
+				E66EF7F625D5A3000068083D /* zainh WatchKit Extension */,
+				E66EF7D025D5A2F80068083D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E66EF7D025D5A2F80068083D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E66EF7CF25D5A2F80068083D /* zainh.app */,
+				E66EF7E325D5A2FD0068083D /* zainh WatchKit App.app */,
+				E66EF7F225D5A3000068083D /* zainh WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E66EF7D125D5A2F80068083D /* zainh */ = {
+			isa = PBXGroup;
+			children = (
+				E66EF7D225D5A2F80068083D /* AppDelegate.swift */,
+				E66EF7D425D5A2F80068083D /* SceneDelegate.swift */,
+				E66EF7D625D5A2F80068083D /* ViewController.swift */,
+				E66EF7D825D5A2F80068083D /* Main.storyboard */,
+				E66EF7DB25D5A2FD0068083D /* Assets.xcassets */,
+				E66EF7DD25D5A2FD0068083D /* LaunchScreen.storyboard */,
+				E66EF7E025D5A2FD0068083D /* Info.plist */,
+			);
+			path = zainh;
+			sourceTree = "<group>";
+		};
+		E66EF7E725D5A2FD0068083D /* zainh WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E66EF81525D5A68B0068083D /* Interface.storyboard */,
+				E66EF7EB25D5A2FF0068083D /* Assets.xcassets */,
+				E66EF7ED25D5A2FF0068083D /* Info.plist */,
+			);
+			path = "zainh WatchKit App";
+			sourceTree = "<group>";
+		};
+		E66EF7F625D5A3000068083D /* zainh WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E66EF82D25D5AB730068083D /* InterfaceController.swift */,
+				E66EF84125D5AC430068083D /* batsmen1Name.swift */,
+				E66EF83A25D5AC310068083D /* AddT2Players.swift */,
+				E66EF84625D5AC490068083D /* bottomBatsmen.swift */,
+				E66EF84B25D5AC4F0068083D /* bowler.swift */,
+				E66EF85025D5AC560068083D /* changeInnings.swift */,
+				E66EF85525D5AC5A0068083D /* chooseBattingTeam.swift */,
+				E66EF85F25D5AC6C0068083D /* enterPlayerNameController.swift */,
+				E66EF86725D5ACA20068083D /* extras.swift */,
+				E66EF86C25D5ACA70068083D /* HomeTeamRowController.swift */,
+				E66EF87125D5ACC20068083D /* oversNumberPad.swift */,
+				E66EF87625D5ACCA0068083D /* scoreBoard.swift */,
+				E66EF87B25D5ACD10068083D /* selectBottomBatsmenAW.swift */,
+				E66EF88025D5ACD80068083D /* selectHomeTeamPlayers.swift */,
+				E66EF88525D5ACE00068083D /* selectPlayerNameRowController.swift */,
+				E66EF88A25D5ACE60068083D /* selectTopBatsmenAW.swift */,
+				E66EF88F25D5ACF00068083D /* T2RowController.swift */,
+				E66EF89425D5ACFA0068083D /* team2PlayersController.swift */,
+				E66EF89925D5AD000068083D /* topBatsmen.swift */,
+				E66EF89E25D5AD060068083D /* wickets.swift */,
+				E66EF8A325D5AD0E0068083D /* WinningTeamScreen.swift */,
+				E66EF7F925D5A3000068083D /* ExtensionDelegate.swift */,
+				E66EF7FB25D5A3000068083D /* ComplicationController.swift */,
+				E66EF7FD25D5A3010068083D /* Assets.xcassets */,
+				E66EF7FF25D5A3010068083D /* Info.plist */,
+			);
+			path = "zainh WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E66EF7CE25D5A2F80068083D /* zainh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66EF80A25D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh" */;
+			buildPhases = (
+				E66EF7CB25D5A2F80068083D /* Sources */,
+				E66EF7CC25D5A2F80068083D /* Frameworks */,
+				E66EF7CD25D5A2F80068083D /* Resources */,
+				E66EF80925D5A3010068083D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E66EF7E625D5A2FD0068083D /* PBXTargetDependency */,
+			);
+			name = zainh;
+			productName = zainh;
+			productReference = E66EF7CF25D5A2F80068083D /* zainh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E66EF7E225D5A2FD0068083D /* zainh WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66EF80625D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh WatchKit App" */;
+			buildPhases = (
+				E66EF7E125D5A2FD0068083D /* Resources */,
+				E66EF80525D5A3010068083D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E66EF7F525D5A3000068083D /* PBXTargetDependency */,
+			);
+			name = "zainh WatchKit App";
+			productName = "zainh WatchKit App";
+			productReference = E66EF7E325D5A2FD0068083D /* zainh WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E66EF7F125D5A3000068083D /* zainh WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66EF80225D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh WatchKit Extension" */;
+			buildPhases = (
+				E66EF7EE25D5A3000068083D /* Sources */,
+				E66EF7EF25D5A3000068083D /* Frameworks */,
+				E66EF7F025D5A3000068083D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "zainh WatchKit Extension";
+			productName = "zainh WatchKit Extension";
+			productReference = E66EF7F225D5A3000068083D /* zainh WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E66EF7C725D5A2F70068083D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					E66EF7CE25D5A2F80068083D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E66EF7E225D5A2FD0068083D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E66EF7F125D5A3000068083D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = E66EF7CA25D5A2F70068083D /* Build configuration list for PBXProject "zainh" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E66EF7C625D5A2F70068083D;
+			productRefGroup = E66EF7D025D5A2F80068083D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E66EF7CE25D5A2F80068083D /* zainh */,
+				E66EF7E225D5A2FD0068083D /* zainh WatchKit App */,
+				E66EF7F125D5A3000068083D /* zainh WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E66EF7CD25D5A2F80068083D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66EF7DF25D5A2FD0068083D /* LaunchScreen.storyboard in Resources */,
+				E66EF7DC25D5A2FD0068083D /* Assets.xcassets in Resources */,
+				E66EF7DA25D5A2F80068083D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66EF7E125D5A2FD0068083D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66EF81625D5A68B0068083D /* Interface.storyboard in Resources */,
+				E66EF7EC25D5A2FF0068083D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66EF7F025D5A3000068083D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66EF8AE25D5AF200068083D /* Interface.storyboard in Resources */,
+				E66EF7FE25D5A3010068083D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E66EF7CB25D5A2F80068083D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66EF7D725D5A2F80068083D /* ViewController.swift in Sources */,
+				E66EF7D325D5A2F80068083D /* AppDelegate.swift in Sources */,
+				E66EF7D525D5A2F80068083D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66EF7EE25D5A3000068083D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66EF89F25D5AD060068083D /* wickets.swift in Sources */,
+				E66EF7FA25D5A3000068083D /* ExtensionDelegate.swift in Sources */,
+				E66EF86825D5ACA20068083D /* extras.swift in Sources */,
+				E66EF84C25D5AC4F0068083D /* bowler.swift in Sources */,
+				E66EF89A25D5AD000068083D /* topBatsmen.swift in Sources */,
+				E66EF85125D5AC560068083D /* changeInnings.swift in Sources */,
+				E66EF82E25D5AB730068083D /* InterfaceController.swift in Sources */,
+				E66EF88B25D5ACE60068083D /* selectTopBatsmenAW.swift in Sources */,
+				E66EF84725D5AC4A0068083D /* bottomBatsmen.swift in Sources */,
+				E66EF87725D5ACCA0068083D /* scoreBoard.swift in Sources */,
+				E66EF8A425D5AD0E0068083D /* WinningTeamScreen.swift in Sources */,
+				E66EF7FC25D5A3000068083D /* ComplicationController.swift in Sources */,
+				E66EF88125D5ACD80068083D /* selectHomeTeamPlayers.swift in Sources */,
+				E66EF88625D5ACE00068083D /* selectPlayerNameRowController.swift in Sources */,
+				E66EF85625D5AC5A0068083D /* chooseBattingTeam.swift in Sources */,
+				E66EF83B25D5AC310068083D /* AddT2Players.swift in Sources */,
+				E66EF87225D5ACC20068083D /* oversNumberPad.swift in Sources */,
+				E66EF86025D5AC6C0068083D /* enterPlayerNameController.swift in Sources */,
+				E66EF87C25D5ACD20068083D /* selectBottomBatsmenAW.swift in Sources */,
+				E66EF86D25D5ACA70068083D /* HomeTeamRowController.swift in Sources */,
+				E66EF89025D5ACF00068083D /* T2RowController.swift in Sources */,
+				E66EF84225D5AC430068083D /* batsmen1Name.swift in Sources */,
+				E66EF89525D5ACFA0068083D /* team2PlayersController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E66EF7E625D5A2FD0068083D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E66EF7E225D5A2FD0068083D /* zainh WatchKit App */;
+			targetProxy = E66EF7E525D5A2FD0068083D /* PBXContainerItemProxy */;
+		};
+		E66EF7F525D5A3000068083D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E66EF7F125D5A3000068083D /* zainh WatchKit Extension */;
+			targetProxy = E66EF7F425D5A3000068083D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E66EF7D825D5A2F80068083D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E66EF7D925D5A2F80068083D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E66EF7DD25D5A2FD0068083D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E66EF7DE25D5A2FD0068083D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E66EF80025D5A3010068083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E66EF80125D5A3010068083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E66EF80325D5A3010068083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "zainh WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		E66EF80425D5A3010068083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "zainh WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		E66EF80725D5A3010068083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = zainh_WatchKit_Extension;
+				INFOPLIST_FILE = "zainh WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		E66EF80825D5A3010068083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = zainh_WatchKit_Extension;
+				INFOPLIST_FILE = "zainh WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		E66EF80B25D5A3010068083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zainh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E66EF80C25D5A3010068083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zainh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zainh.zainh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E66EF7CA25D5A2F70068083D /* Build configuration list for PBXProject "zainh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66EF80025D5A3010068083D /* Debug */,
+				E66EF80125D5A3010068083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E66EF80225D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66EF80325D5A3010068083D /* Debug */,
+				E66EF80425D5A3010068083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E66EF80625D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66EF80725D5A3010068083D /* Debug */,
+				E66EF80825D5A3010068083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E66EF80A25D5A3010068083D /* Build configuration list for PBXNativeTarget "zainh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66EF80B25D5A3010068083D /* Debug */,
+				E66EF80C25D5A3010068083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E66EF7C725D5A2F70068083D /* Project object */;
+}

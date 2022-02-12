@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
+    <device id="watch42"/>
+    <dependencies>
+        <deployment version="1536" identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Start Game" id="1ck-nU-enp">
+                            <connections>
+                                <segue destination="LUM-rC-pA2" kind="push" id="wFa-VX-ITP"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Edit Team" id="tGB-Qa-ZUP">
+                            <connections>
+                                <segue destination="KTn-fQ-xn2" kind="push" id="h5c-7M-xQF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Stats" id="7dW-NA-GIx">
+                            <connections>
+                                <segue destination="4Ip-4d-cn3" kind="push" id="bzB-Jx-P1V"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="editTeamButton" destination="tGB-Qa-ZUP" id="lRs-wC-hf6"/>
+                        <outlet property="startGameButton" destination="1ck-nU-enp" id="3OI-De-rDF"/>
+                        <outlet property="statsButton" destination="7dW-NA-GIx" id="tTt-aN-WAm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="186" y="344"/>
+        </scene>
+        <!--AddT2 Players-->
+        <scene sceneID="1Ar-KY-9N8">
+            <objects>
+                <controller id="LUM-rC-pA2" customClass="AddT2Players" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <button width="1" height="0.14999999999999999" alignment="left" title="Enter Team2 Name" id="21n-Ex-ZSi">
+                            <connections>
+                                <action selector="askForTeam2Name" destination="LUM-rC-pA2" id="oom-QD-NPA"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="v6v-Nq-l0N">
+                            <items>
+                                <tableRow identifier="T2RowController" id="MhA-vZ-Tjb" customClass="T2RowController" customModule="zainh_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="E69-8m-BLx">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="label" id="LgL-st-5G5"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="myLabel" destination="LgL-st-5G5" id="c3e-JG-tqH"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="bottom" id="qvP-53-8tD">
+                            <items>
+                                <button width="0.25" height="1" alignment="center" verticalAlignment="bottom" backgroundImage="plus.circle" catalog="system" id="oAf-s8-ons">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="askT2Names" destination="LUM-rC-pA2" id="RuJ-Sf-rZm"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="right" title="Done" id="uQT-3v-WZK">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <connections>
+                                        <segue destination="rIz-AF-WYr" kind="push" id="rcp-pU-jGO"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="addT2PlayerButton" destination="oAf-s8-ons" id="u77-ZO-YyO"/>
+                        <outlet property="enterTeam2Name" destination="21n-Ex-ZSi" id="fF8-6L-ZNe"/>
+                        <outlet property="myTable" destination="v6v-Nq-l0N" id="bJZ-I0-LjL"/>
+                        <outlet property="t2DoneButton" destination="uQT-3v-WZK" id="n0l-39-8cJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="583.23076923076928" y="53.61538461538462"/>
+        </scene>
+        <!--Choose Batting Team-->
+        <scene sceneID="d0b-cb-9c7">
+            <objects>
+                <controller id="rIz-AF-WYr" customClass="chooseBattingTeam" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" title="home" id="Dv2-Fk-f3I">
+                            <connections>
+                                <action selector="homeTeamSelected" destination="rIz-AF-WYr" id="4F9-x1-I1f"/>
+                            </connections>
+                        </button>
+                        <label height="41" alignment="center" text="Select Team Batting First" textAlignment="center" numberOfLines="2" id="w51-yv-Fna"/>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Team 2" id="pU0-wA-WJ1">
+                            <connections>
+                                <action selector="team2Selected" destination="rIz-AF-WYr" id="LVZ-Ub-FRO"/>
+                            </connections>
+                        </button>
+                        <button width="0.33000000000000002" alignment="right" verticalAlignment="bottom" title="Done" id="oOI-Z7-PBv">
+                            <color key="titleColor" name="AccentColor"/>
+                            <connections>
+                                <segue destination="aia-zc-8Ej" kind="push" id="pYa-CL-5Ia"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="homeTeamBatsFirst" destination="Dv2-Fk-f3I" id="b5I-ST-4uP"/>
+                        <outlet property="team2BatsFirst" destination="pU0-wA-WJ1" id="TZj-la-95P"/>
+                        <outlet property="textLabel" destination="w51-yv-Fna" id="Urf-sK-PBo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="866.56410256410265" y="52.743589743589745"/>
+        </scene>
+        <!--oversNumberPad-->
+        <scene sceneID="Lso-Eh-2BG">
+            <objects>
+                <controller identifier="oversNumberPad" id="aia-zc-8Ej" customClass="oversNumberPad" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="How Many Overs?" textAlignment="justified" id="5pS-rE-Buy"/>
+                        <group width="1" alignment="left" id="pTV-Gu-gY7">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="1" id="lML-mq-9xU">
+                                    <connections>
+                                        <action selector="addOne" destination="aia-zc-8Ej" id="hvi-CP-M9h"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="2" id="V5X-fQ-HQo">
+                                    <connections>
+                                        <action selector="addTwo" destination="aia-zc-8Ej" id="24I-Km-1Bo"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="3" id="qnF-cG-tSf">
+                                    <connections>
+                                        <action selector="addThree" destination="aia-zc-8Ej" id="heB-k5-P54"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="o89-Rl-mNg">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="4" id="Sb8-6f-Oun">
+                                    <connections>
+                                        <action selector="addFour" destination="aia-zc-8Ej" id="aMo-gT-mo4"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="5" id="Z2z-AF-EEp">
+                                    <connections>
+                                        <action selector="addFive" destination="aia-zc-8Ej" id="cVf-ct-6ek"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="6" id="Ck8-l4-9aj">
+                                    <connections>
+                                        <action selector="addSix" destination="aia-zc-8Ej" id="A6M-GS-aU6"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="9QP-2W-I1G">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="7" id="kLj-3S-ghQ">
+                                    <connections>
+                                        <action selector="addSeven" destination="aia-zc-8Ej" id="w1z-qC-tSP"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="8" id="3TA-8o-mdC">
+                                    <connections>
+                                        <action selector="addEight" destination="aia-zc-8Ej" id="Eyv-O6-juF"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="9" id="aof-Gy-NI0">
+                                    <connections>
+                                        <action selector="addNine" destination="aia-zc-8Ej" id="RG0-lX-zAc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="8FV-Lb-jvV">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="0" id="Wfa-gj-4PR">
+                                    <connections>
+                                        <action selector="addZero" destination="aia-zc-8Ej" id="87M-4D-kqV"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="delete.left.fill" catalog="system" id="Hbc-k4-XFI">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="deleteLast" destination="aia-zc-8Ej" id="nj4-hl-RvZ"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="5Qr-RJ-pcU">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="ngd-Zi-ZyH" kind="push" id="ej7-Vr-WIp"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="delete" destination="Hbc-k4-XFI" id="0dV-H9-7F0"/>
+                        <outlet property="displayNumbers" destination="5pS-rE-Buy" id="XGI-UN-TeL"/>
+                        <outlet property="eight" destination="3TA-8o-mdC" id="17X-vw-6Ur"/>
+                        <outlet property="five" destination="Z2z-AF-EEp" id="Tyx-KT-uIv"/>
+                        <outlet property="four" destination="Sb8-6f-Oun" id="aUf-R0-szR"/>
+                        <outlet property="next" destination="5Qr-RJ-pcU" id="qij-FZ-MFG"/>
+                        <outlet property="nine" destination="aof-Gy-NI0" id="8fh-n3-Skn"/>
+                        <outlet property="one" destination="lML-mq-9xU" id="RE0-6K-B7a"/>
+                        <outlet property="seven" destination="kLj-3S-ghQ" id="p5o-rr-DoQ"/>
+                        <outlet property="six" destination="Ck8-l4-9aj" id="g4t-22-abG"/>
+                        <outlet property="three" destination="qnF-cG-tSf" id="nKj-Xy-KXL"/>
+                        <outlet property="two" destination="V5X-fQ-HQo" id="Mc6-wM-C1l"/>
+                        <outlet property="zero" destination="Wfa-gj-4PR" id="kik-eu-XKm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1152" y="58"/>
+        </scene>
+        <!--topBatsmen-->
+        <scene sceneID="5pW-Ll-saG">
+            <objects>
+                <controller identifier="topBatsmen" id="ngd-Zi-ZyH" userLabel="topBatsmen" customClass="topBatsmen" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="ReO-Fx-q0q">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Select Batsmen 1" textAlignment="center" numberOfLines="2" id="3Zp-9M-me7"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="1Nh-Kh-OPe">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="M6U-5H-ZSC" kind="push" id="lAF-nA-D2C"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <picker width="1" height="1" alignment="left" verticalAlignment="bottom" id="KQv-6e-QEb">
+                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
+                            <connections>
+                                <action selector="pickerActionWithIndex:" destination="ngd-Zi-ZyH" id="vpE-KZ-qee"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="nextScreen" destination="1Nh-Kh-OPe" id="h38-lQ-JOO"/>
+                        <outlet property="topBatsmenName" destination="3Zp-9M-me7" id="LaU-Ub-lhg"/>
+                        <outlet property="topBatsmenPicker" destination="KQv-6e-QEb" id="2c7-yX-Gg7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1416.6666666666667" y="58.846153846153847"/>
+        </scene>
+        <!--bottomBatsmen-->
+        <scene sceneID="CbN-pd-FTU">
+            <objects>
+                <controller identifier="bottomBatsmen" id="M6U-5H-ZSC" userLabel="bottomBatsmen" customClass="bottomBatsmen" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="Nlw-Xg-ZMH">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Select Batsmen 2" textAlignment="center" numberOfLines="2" id="haD-98-DhC" userLabel="Bottom Batsmen Name"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="udc-uE-Kzx">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="WJ1-dI-ngL" kind="push" id="zhu-oD-9Ux"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <picker height="1" alignment="left" id="EMG-wj-Peo" userLabel="Bottom Batsmen Picker">
+                            <connections>
+                                <action selector="bottomBatsmenPickerWithIndex:" destination="M6U-5H-ZSC" id="s90-zN-gnR"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="bottomBatsmenName" destination="haD-98-DhC" id="w7n-fy-hIg"/>
+                        <outlet property="bottomBatsmenPicker" destination="EMG-wj-Peo" id="yTm-IS-1F4"/>
+                        <outlet property="nextScreen" destination="udc-uE-Kzx" id="cfu-6b-Ssg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1710" y="66"/>
+        </scene>
+        <!--bowler-->
+        <scene sceneID="Ngn-lb-9rG">
+            <objects>
+                <controller identifier="bowler" id="WJ1-dI-ngL" userLabel="bowler" customClass="bowler" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="N5m-yk-p60">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Select Bowler" textAlignment="center" numberOfLines="2" id="0KT-gI-Gdg"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="2lF-uC-8M1">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="Rxv-aq-uU8" kind="push" id="aye-SJ-jW2"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <picker height="1" alignment="left" id="wWd-Y2-U9d" userLabel="Bowler Picker">
+                            <connections>
+                                <action selector="bowlerPickerActionWithIndex:" destination="WJ1-dI-ngL" id="DK5-cr-G60"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="bowlerNameLabel" destination="0KT-gI-Gdg" id="5cQ-5S-Y5F"/>
+                        <outlet property="bowlerPicker" destination="wWd-Y2-U9d" id="dwE-M7-rZG"/>
+                        <outlet property="nextScreen" destination="2lF-uC-8M1" id="zOq-8K-cvh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1968" y="53"/>
+        </scene>
+        <!--changeInnings-->
+        <scene sceneID="NP1-v9-YO7">
+            <objects>
+                <controller identifier="changeInnings" id="yQi-h9-tsw" customClass="changeInnings" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.5" alignment="center" verticalAlignment="center" text="Changing Innings " textAlignment="center" numberOfLines="3" id="MQu-hD-2f4">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="🥱😴" id="ObX-4L-VlK">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2290.2051282051284" y="-304.69230769230774"/>
+        </scene>
+        <!--scoreBoard-->
+        <scene sceneID="z7P-eY-zsq">
+            <objects>
+                <controller identifier="scoreBoardInterface" id="Rxv-aq-uU8" userLabel="scoreBoard" customClass="scoreBoard" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="20" alignment="left" id="Up6-Sx-RD1" userLabel="score and overs">
+                            <items>
+                                <label alignment="left" text="205/0 " id="W1k-fI-pm4" userLabel="Score">
+                                    <color key="textColor" red="0.18141173760000001" green="1" blue="0.1827070341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                                <label alignment="right" text="33.2" textAlignment="center" id="tSF-aR-ARu" userLabel="Total Overs">
+                                    <color key="textColor" red="0.21800242349999999" green="1" blue="0.12690447939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="mj4-ny-gsZ" userLabel="sep1"/>
+                        <group width="1" height="0.5" alignment="left" id="T9I-72-IM5" userLabel="Bat Info">
+                            <items>
+                                <group width="0.050000000000000003" height="92" alignment="left" layout="vertical" id="HT1-ie-jiY" userLabel="Strike">
+                                    <items>
+                                        <imageView width="1" alignment="left" verticalAlignment="center" image="circle.fill" catalog="system" id="sUR-nV-yJ3" userLabel="Top Strike">
+                                            <color key="tintColor" red="0.13180285625551583" green="0.72653984777706193" blue="0.13274394074963397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                        <imageView width="1" alignment="left" verticalAlignment="bottom" image="circle.fill" catalog="system" id="NYb-53-NJv" userLabel="Bottom Strike">
+                                            <color key="tintColor" red="0.13180285629999999" green="0.72653984780000003" blue="0.13274394070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="0.45000000000000001" height="1" alignment="left" layout="vertical" id="tG1-sr-9Oa" userLabel="Batsmen Names">
+                                    <items>
+                                        <label width="1" height="0.33000000000000002" alignment="left" verticalAlignment="center" text="Bat 1" id="aGp-XA-pJ1">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label height="0.33000000000000002" alignment="left" verticalAlignment="bottom" text="bat 2" id="kDv-vA-C1j"/>
+                                    </items>
+                                </group>
+                                <group width="0.20000000000000001" height="1" alignment="left" layout="vertical" id="dVC-tP-e7C" userLabel="Runs">
+                                    <items>
+                                        <label width="1" height="0.33000000000000002" alignment="left" text="R" textAlignment="left" id="BiV-qh-nh6">
+                                            <color key="textColor" red="1" green="0.19695140967632341" blue="0.22019919004092803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label height="0.33000000000000002" alignment="left" text="100" textAlignment="center" id="iPy-Sf-Hcm" userLabel="B1R"/>
+                                        <label width="1" height="0.33000000000000002" alignment="left" text="100" textAlignment="left" id="5EP-Ac-UK1" userLabel="B2R"/>
+                                    </items>
+                                </group>
+                                <group width="37" height="1" alignment="right" layout="vertical" id="sE6-oM-fbO" userLabel="Balls">
+                                    <items>
+                                        <label height="0.33000000000000002" alignment="left" text="B" textAlignment="left" id="cOh-Vp-hbI">
+                                            <color key="textColor" red="1" green="0.1969514097" blue="0.22019918999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label width="1" height="0.33000000000000002" alignment="left" text="100" textAlignment="left" id="hsA-bL-dmv"/>
+                                        <label width="1" height="0.33000000000000002" alignment="left" text="100" textAlignment="left" id="i09-bF-Y2B"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="Dv4-FM-gIQ" userLabel="batsmenRight">
+                                    <connections>
+                                        <action selector="batsmenSwipedRight" destination="Rxv-aq-uU8" id="gRw-JZ-Rz6"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="Y7T-dE-sq6" userLabel="batsmenLeft">
+                                    <connections>
+                                        <action selector="batsmenSwipedLeft" destination="Rxv-aq-uU8" id="lcN-kf-UL6"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                        <separator alignment="left" id="TLn-eB-59e" userLabel="sep2"/>
+                        <group width="1" height="0.25" alignment="left" id="aY6-Q2-sL3" userLabel="Bowl Info">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" id="FbD-7R-6yw" userLabel="Bowler Name">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="bottom" text="Bowl 1" textAlignment="left" id="bNw-Re-dE2"/>
+                                    </items>
+                                </group>
+                                <group width="0.25" height="1" alignment="left" layout="vertical" id="8eB-rI-Tep" userLabel="Bowler Runs">
+                                    <items>
+                                        <label height="0.5" alignment="left" text="R" textAlignment="left" id="4xq-sZ-vVs">
+                                            <color key="textColor" red="1" green="0.1969514097" blue="0.22019918999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label height="0.5" alignment="left" verticalAlignment="bottom" text="100" textAlignment="left" id="1WG-dO-OKw"/>
+                                    </items>
+                                </group>
+                                <group width="0.25" height="1" alignment="left" layout="vertical" id="JJU-xa-pmH" userLabel="Bowler Overs">
+                                    <items>
+                                        <label height="0.5" alignment="left" text="OV" id="4RQ-Fi-mbj">
+                                            <color key="textColor" red="1" green="0.1969514097" blue="0.22019918999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label height="0.5" alignment="left" verticalAlignment="bottom" text="10.0" id="xW6-l9-GNq"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="97y-HR-Rvu" userLabel="bowlerRight">
+                                    <connections>
+                                        <action selector="bowlerSwipedRight" destination="Rxv-aq-uU8" id="YAF-Cq-a2d"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="3My-UB-bBM" userLabel="bowlerLeft">
+                                    <connections>
+                                        <action selector="bowlerSwipedLeft" destination="Rxv-aq-uU8" id="c9f-P0-f4c"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                        <separator alignment="left" id="MdY-3R-SiD" userLabel="sep3"/>
+                        <group width="1" alignment="left" id="ABk-m8-EFa" userLabel="History">
+                            <items>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="RMC-r3-EGx" userLabel="Ball1">
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <separator alignment="left" id="aMK-mO-6LM" userLabel="Separator 1"/>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="nvV-1b-lEL" userLabel="Ball2">
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <separator alignment="left" id="TwR-n6-G3a" userLabel="Separator 2"/>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="8gj-Td-znH" userLabel="Ball3">
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <separator alignment="left" id="3q5-jr-0te" userLabel="Separator 3"/>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="Lfj-j4-A3d" userLabel="Ball4">
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <separator alignment="left" id="tFf-DI-ghk" userLabel="Separator 4"/>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="VzD-ga-jFw" userLabel="Ball5">
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <separator height="24" alignment="left" id="1Jw-Nn-XmX" userLabel="Separator 5"/>
+                                <imageView alignment="left" image="circle.fill" catalog="system" id="muc-PF-WDi" userLabel="Ball6">
+                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </items>
+                        </group>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="tHY-cp-hAs" userLabel="0,1,2">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="smallcircle.fill.circle.fill" catalog="system" id="xcf-Rk-xf3" userLabel="Dot Ball">
+                                    <connections>
+                                        <action selector="zeroRunInput" destination="Rxv-aq-uU8" id="KOS-fe-QQK"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="1.square.fill" catalog="system" id="TcR-gH-fok" userLabel="One Run">
+                                    <connections>
+                                        <action selector="oneRunInput" destination="Rxv-aq-uU8" id="97r-KR-guO"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="2.square.fill" catalog="system" id="vXq-1k-7it" userLabel="Two Runs">
+                                    <connections>
+                                        <action selector="twoRunInput" destination="Rxv-aq-uU8" id="b0C-Cs-Ocz"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="cpD-eH-ucr" userLabel="3,4,6">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="3.square.fill" catalog="system" id="HAu-dE-C14" userLabel="Three Runs">
+                                    <connections>
+                                        <action selector="threeRunInput" destination="Rxv-aq-uU8" id="yt3-dX-Jah"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="4.square.fill" catalog="system" id="Bsd-u7-PA9" userLabel="Four Runs">
+                                    <connections>
+                                        <action selector="fourRunInput" destination="Rxv-aq-uU8" id="MPE-vu-lGE"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="6.square.fill" catalog="system" id="cZn-Ns-wOD" userLabel="Six Runs">
+                                    <connections>
+                                        <action selector="sixRunInput" destination="Rxv-aq-uU8" id="mle-O7-pEk"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="WR3-wK-JV8" userLabel="E, W, ?">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="e.square.fill" catalog="system" id="n8Z-ii-YkD" userLabel="Extras">
+                                    <connections>
+                                        <action selector="extrasInput" destination="Rxv-aq-uU8" id="7MV-fH-tt3"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="w.square.fill" catalog="system" id="7Ea-8R-d1d" userLabel="Wicket">
+                                    <connections>
+                                        <action selector="wicketInput" destination="Rxv-aq-uU8" id="oMo-9F-JYL"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="questionmark.diamond.fill" catalog="system" id="JBT-zT-lqY" userLabel="Other">
+                                    <connections>
+                                        <action selector="otherInput" destination="Rxv-aq-uU8" id="b93-T6-WTG"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bat1Balls" destination="hsA-bL-dmv" id="ZCA-R9-riM"/>
+                        <outlet property="bat1Name" destination="aGp-XA-pJ1" id="nfy-kH-Vtt"/>
+                        <outlet property="bat1Runs" destination="iPy-Sf-Hcm" id="S2G-iq-6jX"/>
+                        <outlet property="bat2Balls" destination="i09-bF-Y2B" id="9mq-T0-Qlm"/>
+                        <outlet property="bat2Name" destination="kDv-vA-C1j" id="FLi-SP-DOP"/>
+                        <outlet property="bat2Runs" destination="5EP-Ac-UK1" id="g2D-fk-tvE"/>
+                        <outlet property="batInfoGroup" destination="T9I-72-IM5" id="Wl9-B2-gzg"/>
+                        <outlet property="batsmenBD6" destination="cOh-Vp-hbI" id="Q17-1G-5Er"/>
+                        <outlet property="batsmenRSR4" destination="BiV-qh-nh6" id="LZG-Dm-8AY"/>
+                        <outlet property="batsmenSGL" destination="Y7T-dE-sq6" id="Vrs-2n-SJw"/>
+                        <outlet property="batsmenSGR" destination="Dv4-FM-gIQ" id="dQx-0Q-xPl"/>
+                        <outlet property="bolwerSGL" destination="3My-UB-bBM" id="Wvn-gy-nqD"/>
+                        <outlet property="bottomOnStrike" destination="NYb-53-NJv" id="KsA-xG-g9o"/>
+                        <outlet property="bowlInfoGroup" destination="aY6-Q2-sL3" id="JO6-MF-9YM"/>
+                        <outlet property="bowlerNameLabel" destination="bNw-Re-dE2" id="OdO-lR-eKl"/>
+                        <outlet property="bowlerOEM" destination="4RQ-Fi-mbj" id="4v9-Ax-dBL"/>
+                        <outlet property="bowlerOversLabel" destination="xW6-l9-GNq" id="nQA-Ff-oXz"/>
+                        <outlet property="bowlerRWE" destination="4xq-sZ-vVs" id="Y4T-HP-vcx"/>
+                        <outlet property="bowlerRunsLabel" destination="1WG-dO-OKw" id="HJw-c5-qoZ"/>
+                        <outlet property="bowlerSGR" destination="97y-HR-Rvu" id="hHx-Ll-DdL"/>
+                        <outlet property="dotBall" destination="xcf-Rk-xf3" id="p31-hE-At7"/>
+                        <outlet property="extraWOGroup" destination="WR3-wK-JV8" id="cCp-Az-a2Z"/>
+                        <outlet property="extras" destination="n8Z-ii-YkD" id="wqh-U5-fN2"/>
+                        <outlet property="fourRuns" destination="Bsd-u7-PA9" id="lPx-fm-fRz"/>
+                        <outlet property="historyGroup" destination="ABk-m8-EFa" id="7Zq-Cb-3UX"/>
+                        <outlet property="imageFive" destination="VzD-ga-jFw" id="dha-sd-ddK"/>
+                        <outlet property="imageFour" destination="Lfj-j4-A3d" id="h2X-FV-VXC"/>
+                        <outlet property="imageOne" destination="RMC-r3-EGx" id="DHc-fT-f6g"/>
+                        <outlet property="imageSix" destination="muc-PF-WDi" id="dHb-eD-WRy"/>
+                        <outlet property="imageThree" destination="8gj-Td-znH" id="LEl-o9-3XC"/>
+                        <outlet property="imageTwo" destination="nvV-1b-lEL" id="s3B-n0-0fw"/>
+                        <outlet property="oneRun" destination="TcR-gH-fok" id="7ab-hD-8Nd"/>
+                        <outlet property="other" destination="JBT-zT-lqY" id="Y4y-Sd-16T"/>
+                        <outlet property="score" destination="W1k-fI-pm4" id="89X-50-ux6"/>
+                        <outlet property="scoreOversGroup" destination="Up6-Sx-RD1" id="NAX-65-0Ea"/>
+                        <outlet property="sep1" destination="mj4-ny-gsZ" id="bcz-9O-vUm"/>
+                        <outlet property="sep2" destination="TLn-eB-59e" id="GIT-H1-D62"/>
+                        <outlet property="sep3" destination="MdY-3R-SiD" id="lQ9-le-hU5"/>
+                        <outlet property="separator1" destination="aMK-mO-6LM" id="m9N-yo-DR9"/>
+                        <outlet property="separator2" destination="TwR-n6-G3a" id="muF-LE-z7g"/>
+                        <outlet property="separator3" destination="3q5-jr-0te" id="UNM-0v-M9O"/>
+                        <outlet property="separator4" destination="tFf-DI-ghk" id="nB5-0G-VmD"/>
+                        <outlet property="separator5" destination="1Jw-Nn-XmX" id="tbt-X8-5eu"/>
+                        <outlet property="sixRuns" destination="cZn-Ns-wOD" id="r5V-6f-wxa"/>
+                        <outlet property="three45Group" destination="cpD-eH-ucr" id="pDP-0y-IyL"/>
+                        <outlet property="threeRuns" destination="HAu-dE-C14" id="nGH-M2-GCU"/>
+                        <outlet property="topOnStrike" destination="sUR-nV-yJ3" id="70e-ef-QNW"/>
+                        <outlet property="totalOversLabel" destination="tSF-aR-ARu" id="tiG-4Q-gKK"/>
+                        <outlet property="twoRuns" destination="vXq-1k-7it" id="PmR-8c-DLA"/>
+                        <outlet property="wicket" destination="7Ea-8R-d1d" id="XhS-SI-VTL"/>
+                        <outlet property="zero12Group" destination="tHY-cp-hAs" id="Fh8-cU-2PC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2287.5897435897436" y="41.846153846153847"/>
+        </scene>
+        <!--Winner Screen-->
+        <scene sceneID="l3z-3A-iSv">
+            <objects>
+                <controller identifier="WinningTeamScreen" id="sfW-4b-uE2" userLabel="Winner Screen" customClass="WinningTeamScreen" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Winning Team Name" textAlignment="center" numberOfLines="3" id="krS-jj-d61"/>
+                        <label alignment="center" text="Is The Winner!" textAlignment="center" id="28p-hk-PuP"/>
+                        <label width="1" height="0.5" alignment="center" text="🥳" textAlignment="center" id="CJf-wl-Lzf">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                        <button width="0.33000000000000002" alignment="right" verticalAlignment="bottom" title="Done" id="61R-mD-dQf" userLabel="Winning Screen Done">
+                            <color key="titleColor" name="AccentColor"/>
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="VOG-M2-w8u"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="WinningTeamLabel" destination="krS-jj-d61" id="k3R-8R-kOd"/>
+                        <outlet property="emoji" destination="CJf-wl-Lzf" id="N4o-ee-3E6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2522" y="14"/>
+        </scene>
+        <!--extras-->
+        <scene sceneID="Y2w-9Q-u77">
+            <objects>
+                <controller identifier="extras" id="s0p-oz-ajX" customClass="extras" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.25" alignment="left" id="URR-RD-rtF" userLabel="How many Extras?">
+                            <items>
+                                <button width="0.25" height="1" alignment="left" backgroundImage="chevron.left.circle.fill" catalog="system" id="hkX-ur-pzE">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="Rxv-aq-uU8" kind="push" id="DiN-9z-Xj2"/>
+                                    </connections>
+                                </button>
+                                <label width="0.75" height="1" alignment="left" text="How Many Extras?" textAlignment="center" numberOfLines="2" id="5uL-Y9-s0N"/>
+                            </items>
+                        </group>
+                        <picker height="0.25" alignment="center" id="WgS-Qh-QPZ">
+                            <connections>
+                                <action selector="pickerActionWithIndex:" destination="s0p-oz-ajX" id="PMl-xA-TRs"/>
+                            </connections>
+                        </picker>
+                        <group width="1" height="0.5" alignment="left" layout="vertical" id="L9Q-iB-XhB" userLabel="Change Strike Group">
+                            <items>
+                                <label height="0.5" alignment="center" text="Change Strike?" textAlignment="center" id="wAL-Lg-nmZ"/>
+                                <group width="1" height="0.5" alignment="left" id="Hl5-Rx-wl6">
+                                    <items>
+                                        <button width="0.5" height="1" alignment="left" title="yes" id="iuS-85-hHn">
+                                            <connections>
+                                                <action selector="yesAction" destination="s0p-oz-ajX" id="gvS-VG-idB"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" height="1" alignment="left" title="No" id="tNo-Bx-LKY">
+                                            <connections>
+                                                <action selector="noAction" destination="s0p-oz-ajX" id="ZhQ-mP-JGi"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="extraLabel" destination="5uL-Y9-s0N" id="P6n-Go-hDn"/>
+                        <outlet property="extraPicker" destination="WgS-Qh-QPZ" id="SxE-uX-b3n"/>
+                        <outlet property="lastScreen" destination="hkX-ur-pzE" id="NLk-rg-IRu"/>
+                        <outlet property="noButton" destination="tNo-Bx-LKY" id="5eJ-Fn-HSa"/>
+                        <outlet property="yesButton" destination="iuS-85-hHn" id="EhY-qo-75b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2009" y="485"/>
+        </scene>
+        <!--Wickets-->
+        <scene sceneID="aCU-ph-d8T">
+            <objects>
+                <controller identifier="Wickets" id="oYW-og-15E" customClass="wickets" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Who Got Out?" textAlignment="center" id="ZCo-dc-LrH"/>
+                        <button width="1" alignment="left" title="TopBatsmen" id="JrN-KS-I3E">
+                            <connections>
+                                <action selector="getTopBatsmenOut" destination="oYW-og-15E" id="cZj-fU-iyD"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Bottom Batsmen" id="2qy-Zq-yHC">
+                            <connections>
+                                <action selector="getBottomBatsmenOut" destination="oYW-og-15E" id="ux0-Vg-A3g"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" text="How?" id="ZNb-xV-BjY"/>
+                        <picker height="0.25" alignment="left" id="N5L-bU-6LV">
+                            <connections>
+                                <action selector="PickerActionWithIndex:" destination="oYW-og-15E" id="qhh-uP-f8J"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="0.25" alignment="right" verticalAlignment="bottom" title="Done" id="rcU-ai-5kf" userLabel="doneTopBatsmen">
+                            <color key="titleColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="removeTopBatsmen" destination="oYW-og-15E" id="gwY-dD-pX6"/>
+                                <segue destination="wZ1-KC-vqf" kind="push" id="hxZ-ie-o07"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.25" alignment="right" verticalAlignment="bottom" title="Done" id="qJ9-Ve-vjd" userLabel="doneBottomBatsmen">
+                            <color key="titleColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="removeBottombatsmen" destination="oYW-og-15E" id="eCg-tW-wa5"/>
+                                <segue destination="Qkx-EO-rWb" kind="push" id="tkm-hZ-yrO"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bottomBatsmenOut" destination="2qy-Zq-yHC" id="lFr-jB-6kI"/>
+                        <outlet property="doneBottomeBatsmenOut" destination="qJ9-Ve-vjd" id="9xG-qA-WqL"/>
+                        <outlet property="doneTopBatsmenOut" destination="rcU-ai-5kf" id="fcr-IV-lXA"/>
+                        <outlet property="howOutLabel" destination="ZNb-xV-BjY" id="0O2-YF-gBn"/>
+                        <outlet property="howOutPicker" destination="N5L-bU-6LV" id="WL5-IX-aqA"/>
+                        <outlet property="topBatsmenOut" destination="JrN-KS-I3E" id="NwN-1X-9kP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2288" y="639"/>
+        </scene>
+        <!--Enter Player Names-->
+        <scene sceneID="DCr-4I-dvx">
+            <objects>
+                <controller identifier="Enter Player Names" id="KTn-fQ-xn2" customClass="enterPlayerNameController" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <button width="1" height="0.14999999999999999" alignment="left" title="Enter Team Name" id="2EJ-8M-sI8">
+                            <connections>
+                                <action selector="askForHomeTeamName" destination="KTn-fQ-xn2" id="MTu-b1-zAN"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="oaf-vi-G31">
+                            <items>
+                                <tableRow identifier="HomeTeamRowController" id="9zg-4a-mDJ" customClass="HomeTeamRowController" customModule="zainh_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="weT-px-F8i">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="hwO-17-Qex"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="homeGroup" destination="weT-px-F8i" id="gdm-RC-Ot9"/>
+                                        <outlet property="homeTeamLabel" destination="hwO-17-Qex" id="waR-sN-HHV"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="bottom" id="7TG-zo-a7b">
+                            <items>
+                                <button width="0.25" height="1" alignment="center" verticalAlignment="bottom" backgroundImage="plus.circle" catalog="system" id="lVL-d3-Biw">
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <connections>
+                                        <action selector="askForName" destination="KTn-fQ-xn2" id="ATc-BF-Jq9"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="right" verticalAlignment="bottom" title="Done" id="gXg-E4-bqu">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <connections>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="jJx-4k-9C7"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="addPlayerButton" destination="lVL-d3-Biw" id="u3t-ao-8VJ"/>
+                        <outlet property="doneButton" destination="gXg-E4-bqu" id="592-B4-sql"/>
+                        <outlet property="enterHomeTeamName" destination="2EJ-8M-sI8" id="MLp-bd-zkq"/>
+                        <outlet property="homeTeamTable" destination="oaf-vi-G31" id="2k4-tw-seg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="583.23076923076928" y="366.58974358974359"/>
+        </scene>
+        <!--Show statistics-->
+        <scene sceneID="ZOk-jh-8dm">
+            <objects>
+                <controller identifier="Show statistics" id="4Ip-4d-cn3"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="728"/>
+        </scene>
+        <!--selectTopBatsmenAW-->
+        <scene sceneID="ggt-pg-mWd">
+            <objects>
+                <controller identifier="selectTopBatsmenAW" id="wZ1-KC-vqf" userLabel="selectTopBatsmenAW" customClass="selectTopBatsmenAW" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="QQc-kt-5q3">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Select Batsmen 1" textAlignment="center" numberOfLines="2" id="iM3-74-Xtl"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="ni0-pF-ruN">
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="Rxv-aq-uU8" kind="push" id="768-4b-1jE"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <picker width="1" height="1" alignment="left" verticalAlignment="bottom" id="qgU-B0-Bb3">
+                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
+                            <connections>
+                                <action selector="pickerActionWithIndex:" destination="wZ1-KC-vqf" id="6Ig-mG-qLr"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="nextScreen" destination="ni0-pF-ruN" id="wV0-aX-Ubr"/>
+                        <outlet property="topBatsmenName" destination="iM3-74-Xtl" id="0j5-qY-Gxg"/>
+                        <outlet property="topBatsmenPicker" destination="qgU-B0-Bb3" id="2PM-Nu-Z8p"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2750" y="371"/>
+        </scene>
+        <!--selectBottomBatsmenAW-->
+        <scene sceneID="2Ey-gh-CEd">
+            <objects>
+                <controller identifier="selectBottomBatsmenAW" id="Qkx-EO-rWb" userLabel="selectBottomBatsmenAW" customClass="selectBottomBatsmenAW" customModule="zainh_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="FvK-w5-Hmd">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Select Batsmen 2" textAlignment="center" numberOfLines="2" id="FLC-Pa-hc1" userLabel="Bottom Batsmen Name"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" backgroundImage="chevron.right.circle.fill" catalog="system" id="A6W-EJ-KF8">
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <segue destination="Rxv-aq-uU8" kind="push" id="mkh-xx-rjt"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <picker height="1" alignment="left" id="CTm-FS-DMX" userLabel="Bottom Batsmen Picker">
+                            <connections>
+                                <action selector="pickerActionWithIndex:" destination="Qkx-EO-rWb" id="f0s-Xd-lGX"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="bottomBatsmenName" destination="FLC-Pa-hc1" id="JiD-7T-6fG"/>
+                        <outlet property="bottomBatsmenPicker" destination="CTm-FS-DMX" id="GsE-ax-boj"/>
+                        <outlet property="nextScreen" destination="A6W-EJ-KF8" id="eP9-Yp-rle"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2752" y="765"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mkh-xx-rjt"/>
+        <segue reference="jJx-4k-9C7"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="1.square.fill" catalog="system" width="128" height="114"/>
+        <image name="2.square.fill" catalog="system" width="128" height="114"/>
+        <image name="3.square.fill" catalog="system" width="128" height="114"/>
+        <image name="4.square.fill" catalog="system" width="128" height="114"/>
+        <image name="6.square.fill" catalog="system" width="128" height="114"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="100"/>
+        <image name="e.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="questionmark.diamond.fill" catalog="system" width="128" height="122"/>
+        <image name="smallcircle.fill.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="w.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
